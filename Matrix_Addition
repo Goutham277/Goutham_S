@@ -1,0 +1,38 @@
+#include <stdio.h>
+int main() 
+{
+  int r, c, a[5][5], b[5][5], sum[10][10], i, j;
+  printf("Enter the number of Rows: ");
+  scanf("%d",&r);
+  printf("Enter the number of columns: ");
+  scanf("%d",&c);
+  printf("Enter elements of 1st matrix:\n");
+  for (i=0; i < r; ++i)
+    for (j=0; j < c; ++j) 
+    {
+      printf("Enter elements a %d %d: ", i + 1, j + 1);
+      scanf("%d",&a[i][j]);
+    }
+  printf("Enter elements of 2nd matrix:\n");
+  for (i = 0; i < r; ++i)
+    for (j = 0; j < c; ++j)
+     {
+      printf("Enter elements b%d %d: ", i + 1, j + 1);
+      scanf("%d", &b[i][j]);
+    }
+  for (i=0;i<r;++i)
+    for (j=0;j<c;++j) 
+    {
+      sum[i][j] = a[i][j] + b[i][j];
+    }
+  printf("Sum of two matrices: \n");
+  for (i=0;i<r;++i)
+    for (j=0;j<c;++j) 
+    {
+      printf("%d   ",sum[i][j]);
+      if (j==c - 1) 
+      {
+        printf("\n");
+      }
+    }
+}
